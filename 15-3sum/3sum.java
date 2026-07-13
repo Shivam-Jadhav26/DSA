@@ -6,7 +6,6 @@ class Solution {
     public List<List<Integer>> threeSum(int[] nums) {
         List<List<Integer>> result = new ArrayList<>();
         
-        // 1. Sort the array to handle duplicates and enable two-pointer logic
         Arrays.sort(nums);
         int size = nums.length;
         
