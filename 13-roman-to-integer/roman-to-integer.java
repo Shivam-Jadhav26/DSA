@@ -2,8 +2,8 @@ class Solution {
     public int romanToInt(String s) { 
         int size = s.length(); 
         int num = 0; 
-        
-        for (int i = 0; i < size; i++) { 
+        //sub if val is small 
+            for (int i = 0; i < size; i++) { 
             int val = getValue(s.charAt(i)); 
             
             
