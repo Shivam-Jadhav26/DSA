@@ -21,13 +21,11 @@ class Solution {
                 int currentNum = num;
                 int currentStreak = 1;
 
-                // Count the length of the consecutive sequence
                 while (numSet.contains(currentNum + 1)) {
                     currentNum += 1;
                     currentStreak += 1;
                 }
 
-                // Update the maximum sequence length found so far
                 longestStreak = Math.max(longestStreak, currentStreak);
             }
         }
