@@ -1,21 +1,21 @@
 class Solution {
-    public void rotate(int[] arr, int k) {
-        int[] brr = Arrays.copyOf(arr, arr.length);
-          k = k % arr.length;
-        int start = arr.length- k ;
-        int itr = 0 ;
+    public void rotate(int[] nums, int k) {
+        int n = nums.length;
+        k = k % n;
 
-        for (int i = start  ;i<arr.length; i++ ){
-            arr[itr]=arr[i];
-            itr++;
-        }
-        for(int i =0 ; i < start ; i++){
-            arr[itr]=brr[i];
-            itr++;
-        }
-        for(int num : arr){
-            System .out.print(num);
-        }
-        
+        reverse(nums , 0 , n-1);
+        reverse(nums , k , n-1);
+        reverse(nums , 0 , k-1);
     }
+    public void reverse (int[] num , int s, int e){
+        while (e>s){
+            int temp = num[s];
+            num[s]= num[e];
+            num[e] = temp ;
+            s++;
+            e--;
+    }
+
+    }   
+    
 }
